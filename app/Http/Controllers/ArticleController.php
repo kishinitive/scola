@@ -39,6 +39,26 @@ class ArticleController extends Controller
           'name' => 'ユーザー名3'
         ],
       ],
+            (object) [
+        'id' => 4,
+        'title' => 'タイトル4',
+        'body' => '本文4',
+        'created_at' => now(),
+        'user' => (object) [
+          'id' => 4,
+          'name' => 'ユーザー名4',
+        ],
+      ],
+      (object) [
+        'id' => 5,
+        'title' => 'タイトル5',
+        'body' => '本文5',
+        'created_at' =>now(),
+        'user' => (object) [
+          'id' => 5,
+          'name' => 'ユーザー名5',
+        ],
+      ],
     ];
 
     return view('articles.index', ['articles' => $articles]);
