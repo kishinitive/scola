@@ -1,13 +1,12 @@
 @extends('app')
 
-@section('title', '記事一覧')
+@section('title', '記事詳細')
 
 @section('content')
   @include('nav')
   <div class="container">
-    @foreach($articles as $article)
-      @include('articles.card')
-    @endforeach
+    @include('articles.card')
   </div>
   @include('footer')
 @endsection
+
