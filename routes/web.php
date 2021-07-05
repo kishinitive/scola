@@ -31,3 +31,4 @@ Route::prefix('users')->name('users.')->group(function() {
   Route::get('/{name}','UserController@show')->name('show');
   Route::get('/{name}/likes', 'UserController@likes')->name('likes');
 });
+Route::post('/articles/{article}/comment', 'CommentController@store')->name('comment.store');

@@ -37,6 +37,14 @@ class ArticleController extends Controller
   {
     $article->fill($request->all());
     $article->user_id = $request->user()->id;
+    $image = $request->file('image');
+    if($request->hasfile('image')){
+      $path = \Storage::put('/public', $image);
+      $path = explode('/', $path);
+    }else{
+      $path = null;
+    }
+    $article->image = $path[1];
     $article->save();
     $request->tags->each(function ($tagName) use ($article) {
       $tag = Tag::firstOrCreate(['name' => $tagName]);

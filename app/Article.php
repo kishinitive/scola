@@ -12,6 +12,7 @@ class Article extends Model
     protected $fillable = [
       'title',
       'body',
+      'image',
     ];
 
     public function user() 
@@ -39,6 +40,11 @@ class Article extends Model
     public function tags(): BelongsToMany
     {
       return $this->belongsToMany('App\Tag')->withTimestamps();
+    }
+
+    public function comments(): Hasmany
+    {
+      return $this->hasMany('App\Comment');
     }
 
 }

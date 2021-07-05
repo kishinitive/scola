@@ -54,4 +54,9 @@ class User extends Authenticatable
     {
       return $this->belongsToMany('App\Article', 'likes')->withTimestamps();
     }
+
+    public function comments(): HasMany
+    {
+      return $this->hasmany('App\Comment');
+    }
 }

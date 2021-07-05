@@ -12,8 +12,8 @@
           <div class="card-body pt-0">
             @include('error_card_list')
             <div class="card-text">
-              <form method="POST" action="{{ route('articles.store') }}">
-              @include('articles.form')
+              <form method="POST" action="{{ route('articles.store') }}" enctype="multipart/form-data">
+                @include('articles.form')
               <button type="submit" class="btn bg-primary text-light btn-block">投稿する</button>
               </form>
             </div>
