@@ -31,4 +31,8 @@ Route::prefix('users')->name('users.')->group(function() {
   Route::get('/{name}','UserController@show')->name('show');
   Route::get('/{name}/likes', 'UserController@likes')->name('likes');
 });
-Route::post('/articles/{article}/comment', 'CommentController@store')->name('comment.store');
+#Route::post('/articles/{article}/commentedit', 'CommentController@store')->name('comment.store');
+Route::get('/articles/{article}/commentcreate', 'CommentController@create')->name('comment.create');
+Route::post('/articles/{article}/commentcreate', 'CommentController@store')->name('comment.store');
+
+
