@@ -86,13 +86,13 @@ class ArticleController extends Controller
     return redirect()->route('articles.index');
   }
 
-  public function show(string $article, Comment $comment)
+  public function show(Article $article)
   {
-    $article = Article::where('id', $article)->first();
+//    $article = Article::where('id', $article)->first();
 
-    $comments = $article->comments->sortBy('created_at');
+//    $comments = $article->comments->sortBy('created_at');
 
-    return view('articles.show',['article' => $article, 'comments' => $comments]);
+    return view('articles.show',['article' => $article]);
   }
 
   public function like(Request $request, Article $article)

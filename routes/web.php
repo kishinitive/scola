@@ -35,4 +35,4 @@ Route::prefix('users')->name('users.')->group(function() {
 Route::get('/articles/{article}/commentcreate', 'CommentController@create')->name('comment.create');
 Route::post('/articles/{article}/commentcreate', 'CommentController@store')->name('comment.store');
 
-
+Route::get('/articles', 'SearchController@search')->name('search');

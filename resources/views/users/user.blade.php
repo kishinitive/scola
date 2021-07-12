@@ -19,6 +19,7 @@
         {{ $user->name }}
       </a>
     </h2>
+    <div>{{ $user->introduction }}</div>
   </div>
 </div>
 
