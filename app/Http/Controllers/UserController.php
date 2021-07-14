@@ -30,4 +30,18 @@ class UserController extends Controller
       'articles' => $articles,
     ]);
   }
+
+  public function edit(string $name)
+  {
+    $user = User::where('name', $name)->first();
+
+    return view('users.edit', ['user' => $user]);
+  }
+
+  public function update(Request $request, User $user)
+  {
+    $user->fillable($request->all())->save();
+
+    return redirect()->route('users.show');
+  }
 }
