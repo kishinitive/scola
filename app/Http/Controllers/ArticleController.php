@@ -90,9 +90,9 @@ class ArticleController extends Controller
   {
 //    $article = Article::where('id', $article)->first();
 
-//    $comments = $article->comments->sortBy('created_at');
+    $comments = $article->comments->sortBy('created_at');
 
-    return view('articles.show',['article' => $article]);
+    return view('articles.show',['article' => $article, 'comments' => $comments]);
   }
 
   public function like(Request $request, Article $article)

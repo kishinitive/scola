@@ -7,12 +7,12 @@
   <div class="container">
     @include('articles.card')
   </div>
-{{--  <div class="container">
+  <div class="container">
     @foreach($comments as $comment)
       @include('comments.card')
     @endforeach
   </div>
-  @csrf
+{{--  @csrf
   <div class="container">
    <form method="POST" action="{{ route('comment.store', ['article' => $article->id]) }}">
       @include('comments.commentedit')
