@@ -40,8 +40,11 @@ class UserController extends Controller
 
   public function update(Request $request, User $user)
   {
-    $user->fillable($request->all())->save();
+    $user->fill($request->all())->save();
+    #$user->name = $request->name;
+    #$user->introduction = $request->introduction;
+    #$user->save;
 
-    return redirect()->route('users.show');
+    return redirect()->route('articles.index');
   }
 }

@@ -70,12 +70,13 @@
     </div>
     <div class="text-dark">
       {{ $article->image }}
+      {{ $article['image'] }}
     </div>
     <img src="{{ '/storage/' . $article['image'] }}" class='w-100 mb-3'/>
     <img src="{{ './storage/' . $article['image'] }}" class='w-100 mb-3'/>
     <img src="{{ '/./storage/' . $article['image'] }}" class='w-100 mb-3'/>
 
-    <img src="{{ asset('/storage/' . $article->image) }}" class='w-100 mb-3'/>
+    <img src="{{ asset('/storage/' . $article['image']) }}" class='w-100 mb-3'/>
     <img src="{{ asset('/storage/K1rpWyxljDW4sa4r1vsH8gxvqVJQUa93QihlJsjV.jpg') }}" class='w-100 mb-3'/>
   </div>
 

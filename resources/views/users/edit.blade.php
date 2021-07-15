@@ -18,8 +18,13 @@
                 @csrf
                 <div class="md-form">
                   <label>名前</label>
-                  <input type="text" name="name" class="form-control" required value="{{ $user->name ?? old('name') }}">
+                  <input type="text" name="name" class="form-control" required value="{{ $user->name ?? old('name')}}">
                 </div>
+                <div class="md-form">
+                  <label>メールアドレス</label>
+                  <input type="text" name="email" class="form-control" required value="{{ $user->email ?? old('email') }}">
+                </div>
+
 
                 <div class="form-group">
                   <label>自己紹介</label>
@@ -34,6 +39,6 @@
       </div>
     </div>
   </div>
-@endseciton
+@endsection
 
 @include('footer')
