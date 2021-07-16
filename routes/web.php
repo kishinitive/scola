@@ -33,8 +33,6 @@ Route::prefix('users')->name('users.')->group(function() {
   Route::get('/{name}/edit','UserController@edit')->name('edit');
   Route::patch('/{name}','UserController@update')->name('update');
 });
-#Route::post('/articles/{article}/commentedit', 'CommentController@store')->name('comment.store');
-Route::get('/articles/{article}/commentcreate', 'CommentController@create')->name('comment.create');
-Route::post('/articles/{article}/commentcreate', 'CommentController@store')->name('comment.store');
+Route::post('/articles/{article}/commentstore', 'CommentController@store')->name('comment.store');
 
 #Route::get('/articles', 'SearchController@search')->name('search');

@@ -1,5 +1,5 @@
   <div class="container">
-    <form method="POST" action="{{ route('comment.store', ['article' => $article->id]) }}">追加する</a>
+    <form method="POST" action="route('comment.store')" enctype='multipart/form-data'>
       <div class="form-group">
         <label></label>
         <textarea name="body" required class="form-control" rows="10" placeholder="コメント">{{ old('body') }}</textarea>

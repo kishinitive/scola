@@ -10,7 +10,6 @@
         </a>
       </h2>
       <div>{{ $user->introduction }}</div>
-      <div>{{ $user->name }}</div>
     </div>
 
     @if( Auth::id() === $user->id )
