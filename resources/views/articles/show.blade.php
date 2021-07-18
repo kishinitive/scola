@@ -12,6 +12,13 @@
       @include('comments.card')
     @endforeach
   </div>
-  @include('comments.create')
+  <div class="container">
+    <form method="POST" action="{{ route('comments.store', ['article' => $article->id]) }}" enctype='multipart/form-data'>
+    @csrf
+    @include('comments.create')
+    <button type="submit" class="btn btn-primary text-light btn-block">回答する</button>
+    </form>
+  </div>
+
   @include('footer')
 @endsection

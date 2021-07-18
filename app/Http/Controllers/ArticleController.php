@@ -38,15 +38,16 @@ class ArticleController extends Controller
   {
     $article->fill($request->all());
     $article->user_id = $request->user()->id;
+
     $image = $request->file('image');
     if($request->hasfile('image')){
-      $path = \Storage::put('/public', $image);
-      $path = explode('/', $path);
+      $path = $image->store('', 'public');
     }else{
       $path = null;
     }
-    $article->image = $path[1];
+    $article->image = is_null($path)? null : $path;
     $article->save();
+
     $request->tags->each(function ($tagName) use ($article) {
       $tag = Tag::firstOrCreate(['name' => $tagName]);
       $article->tags()->attach($tag);

@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Route;
 
 class CommentController extends Controller
 {
-  public function store(Request $request, Comment $comment)
+  public function store(Request $request, Comment $comment, string $article)
   {
     $comment->body = $request->body;
 #    $comment->image = $request->image;
