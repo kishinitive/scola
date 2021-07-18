@@ -70,10 +70,8 @@
     </div>
     <div class="text-dark">
       {{ $article->image }}
-      {{ $article['image'] }}
     </div>
     <img class='w-100 mb-3'  src="{{ Storage::url($article->image) }}"/>
-    <img src="{{ asset('/storage/K1rpWyxljDW4sa4r1vsH8gxvqVJQUa93QihlJsjV.jpg') }}" class='w-100 mb-3'/>
   </div>
 
   <div class="card-body pt-0 pb-2 pl-3">
