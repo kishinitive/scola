@@ -13,7 +13,7 @@
     @endforeach
   </div>
   <div class="container">
-    <form method="POST" action="{{ route('comments.store', ['article' => $article->id]) }}" enctype='multipart/form-data'>
+    <form method="POST" action="{{ route('comments.store', ['article' => $article]) }}" enctype='multipart/form-data'>
     @csrf
     @include('comments.create')
     <button type="submit" class="btn btn-primary text-light btn-block">回答する</button>

@@ -68,10 +68,11 @@
     <div class="card-text">
       {!! nl2br(e( $article->body )) !!}
     </div>
-    <div class="text-dark">
-      {{ $article->image }}
-    </div>
-    <img class='w-100 mb-3'  src="{{ Storage::url($article->image) }}"/>
+    @if($article->image)
+      <img class='w-100 mb-3'  src="{{ Storage::url($article->image) }}"/>
+    @else
+      <p></p>
+    @endif
   </div>
 
   <div class="card-body pt-0 pb-2 pl-3">
