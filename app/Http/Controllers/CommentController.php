@@ -11,11 +11,18 @@ class CommentController extends Controller
 {
   public function store(Request $request, Article $article, Comment $comment)
   {
-#    dd($article);
     $comment->body = $request->body;
-#    $comment->image = $request->image;
     $comment->user_id = $request->user()->id;
-#    $comment->article_id = $request->article()->id;
+    $comment->article_id = $article->id;
+
+    $image = $request->file('image');
+    if($request->hasfile('image')){
+      $path = $image->store('', 'public');
+    } else {
+      $path = null;
+    }
+    $comment->image = is_null($path)? null : $path;
+
     $comment->save();
 
     return redirect()->route('articles.index');

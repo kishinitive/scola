@@ -17,6 +17,11 @@
     <div class="card-text">
       {{ $comment->body }}
     </div>
+    @if($comment->image)
+      <img class='w-100 mb-3' src="{{ Storage::url($comment->image) }}"/>
+    @else
+      <p></p>
+    @endif
   </div>
 
 </div>
