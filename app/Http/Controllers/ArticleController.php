@@ -16,10 +16,17 @@ class ArticleController extends Controller
     $this->authorizeResource(Article::class,'article');
   }
 
-  public function index()
+  public function index(Request $request)
   {
+    $queryText = $request->queryText;
 
-    $articles = Article::all()->sortByDesc('created_at')->paginate(5);
+    $query = Article::query();
+
+    if($queryText !== null)
+      $query->where('title', 'LIKE', "%$queryText%")
+        ->orWhere('body', 'LIKE', "%$queryText%") ;
+
+    $articles = $query->get()->sortByDesc('created_at')->paginate(5);
 
     return view('articles.index', ['articles' => $articles]);
   }
@@ -116,4 +123,5 @@ class ArticleController extends Controller
           'countLikes' => $article->count_likes,
       ];
   }
+
 }
