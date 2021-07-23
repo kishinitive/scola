@@ -2,13 +2,13 @@
   <li class="nav-item">
     <a class="nav-link text-muted {{ $hasArticles ? 'active' : '' }}"
        href="{{ route('users.show', ['name' => $user->name]) }}">
-      記事
+      質問
     </a>
   </li>
   <li class="nav-item">
     <a class="nav-link text-muted {{ $hasLikes ? 'active' : '' }}"
-       href="{{ route('users.likes', ['name' => $user->name]) }}">
-      いいね
+       href="{{ route('users.comments', ['name' => $user->name]) }}">
+      回答
     </a>
   </li>
 </ul>

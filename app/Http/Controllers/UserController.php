@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use App\Article;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -19,16 +20,30 @@ class UserController extends Controller
     ]);
   }
 
-  public function likes(string $name)
+  public function comments(string $name)
   {
     $user = User::where('name', $name)->first();
 
-    $articles = $user->articles->sortByDesc('created_at');
+    $comment = $user->comments->pluck('article_id')->unique();
 
-    return view('users.likes', [
+    $articles = Article::find($comment);
+
+    return view('users.comments', [
       'user' => $user,
       'articles' => $articles,
     ]);
+
+
+    #$user = User::where('name', $name)->first();
+
+    #$articles = $user->articles->sortByDesc('created_at');
+
+    #return view('users.likes', [
+    #  'user' => $user,
+    #  'articles' => $articles,
+    #]);
+
+
   }
 
   public function edit(string $name)

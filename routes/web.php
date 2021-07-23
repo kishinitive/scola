@@ -32,7 +32,7 @@ Route::get('/resolved', 'ArticleController@resolved')->name('articles.resolved')
 Route::get('/tags/{name}', 'TagController@show')->name('tags.show');
 Route::prefix('users')->name('users.')->group(function() {
   Route::get('/{name}','UserController@show')->name('show');
-  Route::get('/{name}/likes','UserController@likes')->name('likes');
+  Route::get('/{name}/comments','UserController@comments')->name('comments');
   Route::get('/{name}/edit','UserController@edit')->name('edit');
   Route::patch('/{name}','UserController@update')->name('update');
 });
