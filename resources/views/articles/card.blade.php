@@ -3,14 +3,22 @@
     <a href="{{ route('users.show',['name' => $article->user->name]) }}" class="text-dark">
       <i class="fas fa-user-circle fa-3x mr-1"></i>
     </a>
-    <div>
-      <div class="font-weight-bold">
-        <a href="{{ route('users.show', ['name' => $article->user->name]) }}" class="text-dark">
-          {{ $article->user->name }}
-        </a>
-      </div>
-      <div class="font-weight-lighter">{{ $article->created_at->format('Y/m/d H:i') }}</div>
-    </div>
+  <div>
+  <div class="font-weight-bold">
+    <a href="{{ route('users.show', ['name' => $article->user->name]) }}" class="text-dark">
+      {{ $article->user->name }}
+    </a>
+  </div>
+  <div class="font-weight-lighter">
+    {{ $article->created_at->format('Y/m/d H:i') }}
+    @if($article->status === '未解決')
+      <span class="badge rounded-pill bg-danger">未解決</span>
+    @else
+      <span class="badge rounded-pill bg-primary">解決済</span>
+    @endif
+  </div>
+</div>
+
 
   @if( Auth::id() === $article->user_id )
     <!-- dropdown -->

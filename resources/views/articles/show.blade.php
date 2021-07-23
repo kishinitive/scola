@@ -12,6 +12,22 @@
       @include('comments.card')
     @endforeach
   </div>
+
+  @if( Auth::id() === $article->user_id && $article->status === '未解決')
+<div class="card mt-3">
+          <div class="card-body pt-0">
+            @include('error_card_list')
+            <div class="card-text">
+              <p>疑問が解決した時は、下のボタンを押しましょう！</p>
+              <a class="bg-primary text-light" href="{{ route('articles.getresolved', ['article' => $article]) }}">
+                解決済にする
+              </a>
+            </div>
+          </div>
+        </div>
+
+  @endif
+
   <div class="container">
     <form method="POST" action="{{ route('comments.store', ['article' => $article]) }}" enctype='multipart/form-data'>
     @csrf

@@ -96,8 +96,6 @@ class ArticleController extends Controller
 
   public function show(Article $article)
   {
-//    $article = Article::where('id', $article)->first();
-
     $comments = $article->comments->sortBy('created_at');
 
     return view('articles.show',['article' => $article, 'comments' => $comments]);
@@ -123,5 +121,27 @@ class ArticleController extends Controller
           'countLikes' => $article->count_likes,
       ];
   }
+
+  public function getresolved(Article $article)
+  {
+    $article->status = '解決済';
+    $article->save();
+    return redirect()->route('articles.index');
+  }
+
+  public function unsolved()
+  {
+    $query = Article::where('status', '未解決');
+    $articles = $query->get()->sortByDesc('created')->paginate(5);
+    return view('articles.unsolved', ['articles' => $articles]);
+  }
+
+  public function resolved()
+  {
+    $query = Article::where('status', '解決済');
+    $articles = $query->get()->sortByDesc('created')->paginate(5);
+    return view('articles.resolved', ['articles' => $articles]);
+  }
+
 
 }

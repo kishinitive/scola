@@ -1,6 +1,6 @@
 @extends('app')
 
-@section('title', '記事一覧')
+@section('title', '未解決質問一覧')
 
 @section('content')
   @include('nav')
@@ -10,13 +10,13 @@
 
     <ul class="nav nav-tabs nav-justified mt-3">
       <li class="nav-item">
-        <a class="nav-link text-muted active"
-           href="{{ route('articles.index') }}">
+        <a class="nav-link text-muted"
+           href="/">
           新着
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-muted"
+        <a class="nav-link text-muted active"
            href="{{ route('articles.unsolved') }}">
           未解決
         </a>
@@ -38,3 +38,4 @@
   </div>
   @include('footer')
 @endsection
+
