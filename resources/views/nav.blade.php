@@ -4,9 +4,57 @@
 
   <ul class="navbar-nav ml-auto d-flex align-items-center">
 
+    {!! Form::open(['method'=>'get', 'route' => ['articles.index']]) !!}
+<div class="input-group mb-2">
+
+              <div class="form-group">
+                {!! Form::text('queryText', '', ['class' => 'form-control', 'placeholder' => 'キーワードを入力']) !!}
+              </div>
+              <div class="form-group">
+                  {!! Form::submit('Search', ['class' => 'btn btn-primary input-group-append']) !!}
+              </div>
+</div>
+    {!! Form::close() !!}
+
+<!-- <div class="input-group mb-2">
+  <input type="text" class="form-control">
+  <div class="input-group-append">
+    <button type="button" class="btn btn-outline-secondary">Button</button>
+  </div>
+</div>-->
+
+
+<!--    {!! Form::open(['method'=>'get', 'route' => ['articles.index']]) !!}
+
+    <div class="card">
+        <div class="card-body">
+            <div class="row">
+              <div class="form-group col-sm-6">
+                {!! Form::label('queryText', 'キーワード検索', ['class' => 'display-none']) !!}
+                {!! Form::text('queryText', '', ['class' => 'form-control', 'placeholder' => 'キーワードを入力']) !!}
+              </div>
+              <div class="form-group col-sm-2 mt-4 pt-2">
+                  {!! Form::submit('Search', ['class' => 'btn btn-primary btn-block']) !!}
+              </div>
+            </div>
+        </div>
+    </div>
+
+    {!! Form::close() !!} -->
+
+
+    @auth
     <li class="nav-item">
-      <a class="nav-link" href=""><button type="button" class="btn btn-primary m-0">質問する</button></a>
+      <a class="nav-link" href="{{ route('articles.create') }}"><button type="button" class="btn btn-primary m-0"><i class="fas fa-pen mr-1"></i>質問する</button></a>
     </li>
+    @endauth
+
+    @auth
+    <li class="nav-item">
+      <a class="nav-link" href="{{ route('articles.create') }}"><i class="fas fa-pen mr-1"></i>投稿する</a>
+    </li>
+    @endauth
+
 
     @guest
     <li class="nav-item ">
@@ -19,12 +67,6 @@
       <a class="nav-link" href="{{ route('login') }}">ログイン</a>
     </li>
     @endguest
-
-    @auth
-    <li class="nav-item">
-      <a class="nav-link" href="{{ route('articles.create') }}"><i class="fas fa-pen mr-1"></i>投稿する</a>
-    </li>
-    @endauth
 
     @auth
     <!-- Dropdown -->

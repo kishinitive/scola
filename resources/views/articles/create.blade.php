@@ -5,6 +5,20 @@
 @include('nav')
 
 @section('content')
+
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="card mt-3">
+          <div class="card-body pt-0">
+  @include('articles.questiontips')
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
   <div class="container">
     <div class="row">
       <div class="col-12">
