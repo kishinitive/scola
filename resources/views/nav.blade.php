@@ -49,13 +49,6 @@
     </li>
     @endauth
 
-    @auth
-    <li class="nav-item">
-      <a class="nav-link" href="{{ route('articles.create') }}"><i class="fas fa-pen mr-1"></i>投稿する</a>
-    </li>
-    @endauth
-
-
     @guest
     <li class="nav-item ">
       <a class="nav-link" href="{{ route('register') }}">ユーザー登録</a>
