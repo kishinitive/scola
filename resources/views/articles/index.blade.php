@@ -10,7 +10,7 @@
       @include('articles.search')
     @endguest
 
-<!-- <div class="input-group mb-2">
+<div class="input-group mb-2">
   <input type="text" class="form-control">
   <div class="input-group-append">
     <button type="button" class="btn btn-outline-secondary">Button</button>
@@ -22,7 +22,7 @@
 	<span class="input-group-btn">
 		<button type="button" class="btn btn-default">ボタン</button>
 	</span>
-</div> -->
+</div>
 
     <ul class="nav nav-tabs nav-justified mt-3">
       <li class="nav-item">
