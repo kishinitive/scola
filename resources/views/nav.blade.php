@@ -5,55 +5,11 @@
   <ul class="navbar-nav ml-auto d-flex align-items-center">
 
     {!! Form::open(['method'=>'get', 'route' => ['articles.index']]) !!}
-          <div class="input-group  d-flex align-items-center">
-            <div class="form-group">
-              {!! Form::text('queryText', '', ['class' => 'form-control', 'placeholder' => 'キーワードを入力']) !!}
-            </div>
-            <div class="form-group">
-                {!! Form::button('<i class="fas fa-search"></i>' ,['class' => 'ml-0 btn-primary', 'type' => 'submit']) !!}
-            </div>
-</div>
+      <div class="input-group">
+        {!! Form::text('queryText', '', ['class' => 'form-control', 'placeholder' => 'キーワードを入力']) !!}
+        {!! Form::button('<i class="fas fa-search input-group-btn"></i>' ,['class' => 'ml-0 btn-primary', 'type' => 'submit']) !!}
+      </div>
     {!! Form::close() !!}
-
-<!--    {!! Form::open(['method'=>'get', 'route' => ['articles.index']]) !!}
-<div class="input-group mb-2">
-
-              <div class="form-group">
-                {!! Form::text('queryText', '', ['class' => 'form-control', 'placeholder' => 'キーワードを入力']) !!}
-              </div>
-              <div class="form-group">
-                  {!! Form::submit('', ['class' => 'ml-0 btn btn-primary input-group-append']) !!}
-<i class="fas fa-search"></i>i class="fas fa-search"></i>
-              </div>
-</div>
-    {!! Form::close() !!}
-
- <div class="input-group mb-2">
-  <input type="text" class="form-control">
-  <div class="input-group-append">
-    <button type="button" class="btn btn-outline-secondary">Button</button>
-  </div>
-</div>-->
-
-
-<!--    {!! Form::open(['method'=>'get', 'route' => ['articles.index']]) !!}
-
-    <div class="card">
-        <div class="card-body">
-            <div class="row">
-              <div class="form-group col-sm-6">
-                {!! Form::label('queryText', 'キーワード検索', ['class' => 'display-none']) !!}
-                {!! Form::text('queryText', '', ['class' => 'form-control', 'placeholder' => 'キーワードを入力']) !!}
-              </div>
-              <div class="form-group col-sm-2 mt-4 pt-2">
-                  {!! Form::submit('Search', ['class' => 'btn btn-primary btn-block']) !!}
-              </div>
-            </div>
-        </div>
-    </div>
-
-    {!! Form::close() !!} -->
-
 
     @auth
     <li class="nav-item">

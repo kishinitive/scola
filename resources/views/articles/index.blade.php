@@ -10,19 +10,6 @@
       @include('articles.search')
     @endguest
 
-<div class="input-group mb-2">
-  <input type="text" class="form-control">
-  <div class="input-group-append">
-    <button type="button" class="btn btn-outline-secondary">Button</button>
-  </div>
-</div>
-
-<div class="input-group">
-	<input type="text" class="form-control" placeholder="テキスト入力欄">
-	<span class="input-group-btn">
-		<button type="button" class="btn btn-default">ボタン</button>
-	</span>
-</div>
 
     <ul class="nav nav-tabs nav-justified mt-3">
       <li class="nav-item">
