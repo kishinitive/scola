@@ -1,6 +1,6 @@
-<footer class="bg-dark text-center text-light mt-3">
+<footer class="aqua-gradient text-center text-white mt-3">
   <!-- Copyright -->
-  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+  <div class="text-center p-3">
     © 2020 Copyright:Scola
   </div>
   <!-- Copyright -->

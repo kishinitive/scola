@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand navbar-dark bg-dark">
+<nav class="navbar navbar-expand navbar-dark aqua-gradient">
 
   <a class="navbar-brand" href="/"><i class="far mr-1"></i>Scola</a>
 
