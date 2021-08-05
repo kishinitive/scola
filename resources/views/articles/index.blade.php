@@ -10,7 +10,6 @@
       @include('articles.search')
     @endguest
 
-
     <ul class="nav nav-tabs nav-justified mt-5">
       <li class="nav-item">
         <a class="nav-link text-muted active"
