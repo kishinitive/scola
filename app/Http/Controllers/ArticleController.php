@@ -7,6 +7,7 @@ use App\Tag;
 use App\Comment;
 use App\Http\Requests\ArticleRequest;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ArticleController extends Controller
 {
@@ -45,10 +46,32 @@ class ArticleController extends Controller
   {
     $article->fill($request->all());
     $article->user_id = $request->user()->id;
-
     $image = $request->file('image');
     if($request->hasfile('image')){
+      $path = Storage::disk('s3')->putFile('/', $image, 'public');
+    }else{
+      $path = null;
+    }
+    $article->image = Storage::disk('s3')->url($path);
+    $article->save();
+
+    $request->tags->each(function ($tagName) use ($article) {
+      $tag = Tag::firstOrCreate(['name' => $tagName]);
+      $article->tags()->attach($tag);
+    });
+    return redirect()->route('articles.index');
+
+
+/*    $article->fill($request->all());
+    //$requestに入っているデータを新規articleインスタンスに入れる
+    $article->user_id = $request->user()->id;
+    //$requestからuser情報を取り出しそのidをarticleインスタンスに入れる
+    $image = $request->file('image');
+    //変数$imageにアップロードした画像データを入れる
+    if($request->hasfile('image')){
+      //もし$requestにimage(画像データ)が入っていたら
       $path = $image->store('', 'public');
+      //変数$pathに
     }else{
       $path = null;
     }
@@ -60,6 +83,7 @@ class ArticleController extends Controller
       $article->tags()->attach($tag);
     });
     return redirect()->route('articles.index');
+*/
   }
 
   public function edit(Article $article)

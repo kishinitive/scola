@@ -77,7 +77,7 @@
       {!! nl2br(e( $article->body )) !!}
     </div>
     @if($article->image)
-      <img class='w-100 mb-3'  src="{{ Storage::url($article->image) }}"/>
+      <img class='w-100 mb-3'  src="{{ $article->image }}"/>
     @else
       <p></p>
     @endif
