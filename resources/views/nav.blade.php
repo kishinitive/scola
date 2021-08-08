@@ -1,4 +1,3 @@
-<div class='fixed-top'>
 <nav class="navbar navbar-expand navbar-dark aqua-gradient">
 
   <a class="navbar-brand" href="/"><i class="far mr-1"></i>Scola</a>
@@ -57,7 +56,6 @@
   </ul>
 
 </nav>
-</div>
 
 <div id="contents-wrapper">
 </div>
