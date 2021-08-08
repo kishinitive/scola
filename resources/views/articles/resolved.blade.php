@@ -6,9 +6,7 @@
   @include('nav')
   @include('articles.toppic')
   <div class="container">
-    @guest
-      @include('articles.search')
-    @endguest
+
 
     <ul class="nav nav-tabs nav-justified mt-5">
       <li class="nav-item">
