@@ -37,4 +37,4 @@ Route::prefix('users')->name('users.')->group(function() {
   Route::patch('/{name}','UserController@update')->name('update');
 });
 Route::post('/articles/{article}/commentstore', 'CommentController@store')->name('comments.store');
-
+Route::get('guest', 'Auth\LoginController@guestLogin')->name('login.guest');

@@ -5,6 +5,22 @@
 @section('content')
   @include('nav')
   @include('articles.toppic')
+
+  @guest
+  <p class="text-center fs-2">早速質問してみよう！</p>
+  <div class="form-group row justify-content-center">
+    <div>
+      <button class="btn btn-primary">
+        <a href="{{ route('login') }}" class="text-white">ログイン</a>
+      </button>
+      <button class="btn btn-success">
+        <a href="{{ route('login.guest') }}" class="text-white">ゲストログイン</a>
+      </button>
+    </div>
+  </div>
+  @endguest
+
+
   <div class="container">
     <ul class="nav nav-tabs nav-justified mt-5">
       <li class="nav-item">
@@ -30,7 +46,7 @@
     @foreach($articles as $article)
       @include('articles.card')
     @endforeach
-    <div class="mx-auto" style="width: 200px;">
+    <div class="mx-auto mt-4" style="width: 200px;">
     {{ $articles->links() }}
     </div>
   </div>

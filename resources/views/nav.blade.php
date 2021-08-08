@@ -29,6 +29,12 @@
     </li>
     @endguest
 
+    @guest
+    <li class="nav-item">
+      <a class="nav-link" href="{{ route('login.guest') }}">ゲストログイン</a>
+    </li>
+    @endguest
+
     @auth
     <!-- Dropdown -->
     <li class="nav-item dropdown">

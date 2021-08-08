@@ -8,6 +8,7 @@ use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Laravel\Socialite\Facades\Socialite;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
@@ -62,5 +63,16 @@ class LoginController extends Controller
             'email' => $providerUser->getEmail(),
             'token' => $providerUser->token,
         ]);
+    }
+
+    private const GUEST_USER_ID = 22;
+
+    public function guestLogin()
+    {
+      if (Auth::loginUsingId(self::GUEST_USER_ID)) {
+        return redirect('/');
+      }
+
+      return redirect('/');
     }
 }
