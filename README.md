@@ -1,78 +1,64 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Scola
+Scola（スコラ）とは、勉強専門の質問サイトです。解法の手がかりがわからない、勉強法に不安がある、そういった悩みを質問すると他の方から回答を得ることができます。
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+## URL
+[http://s-cola.herokuapp.com/](http://s-cola.herokuapp.com/)
 
-## About Laravel
+## 機能一覧
+* ユーザー登録、ログイン
+* CRUD
+* コメント機能
+* 画像アップロード
+* タグ機能
+* いいね機能
+* 検索
+* タブ分類機能
+* ページネーション
+* レスポンシブデザイン
+[
+## 制作に至った背景
+私はオンライン家庭教師のライン質問対応をしていますが、生徒と直接やりとりをしていると実に多くの子が勉強で困っていることに気がつきます。最近では質問をすれば有名大の大学生などが答えてくれるサービスも増えてきていますが、そのほとんどが有料です。勉強でちょっとわからないことがあるだけなのに親からクレジットカードを借りて課金をするのは子供にとってハードルが高いと思われます。
+そこで料金のかからない勉強専門の質問サイトがあれば、生徒の勉強の手助けになるのではないかと思い、制作に至りました。
+<img width="719" alt="scolascreenshot" src="https://user-images.githubusercontent.com/82514969/128848834-cecd1e0c-7f6c-4e46-a542-ba8cb3136ce7.png">
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 工夫した点
+* 過去の類似の質問を調べられる検索、タグ機能
+* 質問テンプレ<br>
+  回答率を上げるため、わからないところを明確に質問できるようテンプレートを用意した。
+* いいね機能<br>
+  参考になった質問にいいねを押すことで、良問や良回答がすぐにわかるよう配慮した。
+* 解決ステータス<br>
+  質問が現在も回答を求めているかが一目でわかるようステータス機能を実装した。
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 使用技術
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### 設計
+* figma
+* drow.io
 
-## Learning Laravel
+### フロントエンド
+* html
+* css
+* Vue.js
+* bootstrap
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### バックエンド
+* PHP 7.3.28
+* Laravel 6.20.31
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### データベース
+* Postgres 13.3
 
-## Laravel Sponsors
+### 開発
+* vim
+* Docker Desktop for Mac
+* Laradock
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+### 本番環境
+* heroku
+* AWS(S3)
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
-- [Appoly](https://www.appoly.co.uk)
-- [OP.GG](https://op.gg)
+## データベース
+<img width="1064" alt="ER図" src="https://user-images.githubusercontent.com/82514969/128861051-1fef2a0f-7d5e-45be-a355-52128e66f997.png">
 
-## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
