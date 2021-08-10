@@ -8,7 +8,7 @@
 
   @guest
   <p class="text-center fs-2">早速質問してみよう！</p>
-  <div class="form-group row justify-content-center">
+  <div class="form-group row justify-content-center mb-5">
     <div>
       <button class="btn btn-primary">
         <a href="{{ route('login') }}" class="text-white">ログイン</a>
