@@ -1,5 +1,6 @@
 # Scola
 Scola（スコラ）とは、勉強専門の質問サイトです。解法の手がかりがわからない、勉強法に不安がある、そういった悩みを質問すると他の方から回答を得ることができます。
+<img width="719" alt="scolascreenshot" src="https://user-images.githubusercontent.com/82514969/128848834-cecd1e0c-7f6c-4e46-a542-ba8cb3136ce7.png">
 
 ## URL
 [http://s-cola.herokuapp.com/](http://s-cola.herokuapp.com/)
@@ -19,7 +20,7 @@ Scola（スコラ）とは、勉強専門の質問サイトです。解法の手
 ## 制作に至った背景
 私はオンライン家庭教師のライン質問対応をしていますが、生徒と直接やりとりをしていると実に多くの子が勉強で困っていることに気がつきます。最近では質問をすれば有名大の大学生などが答えてくれるサービスも増えてきていますが、そのほとんどが有料です。勉強でちょっとわからないことがあるだけなのに親からクレジットカードを借りて課金をするのは子供にとってハードルが高いと思われます。
 そこで料金のかからない勉強専門の質問サイトがあれば、生徒の勉強の手助けになるのではないかと思い、制作に至りました。
-<img width="719" alt="scolascreenshot" src="https://user-images.githubusercontent.com/82514969/128848834-cecd1e0c-7f6c-4e46-a542-ba8cb3136ce7.png">
+
 
 ## 工夫した点
 * 過去の類似の質問を調べられる検索、タグ機能
@@ -53,6 +54,8 @@ Scola（スコラ）とは、勉強専門の質問サイトです。解法の手
 * vim
 * Docker Desktop for Mac
 * Laradock
+* Git
+* GitHub
 
 ### 本番環境
 * heroku
