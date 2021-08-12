@@ -65,4 +65,4 @@ Scola（スコラ）とは、勉強専門の質問サイトです。解法の手
 <img width="1064" alt="ER図" src="https://user-images.githubusercontent.com/82514969/128861051-1fef2a0f-7d5e-45be-a355-52128e66f997.png">
 
 ## システム構築図
-<img width="1064" alt="システム構築図" src="https://user-images.githubusercontent.com/82514969/129190680-dc803639-eff1-4153-98a6-8bb59c769437.png">
+<img width="1064" alt="システム構築図" src="https://user-images.githubusercontent.com/82514969/129191602-3a26f6ae-e9f0-45ec-b5c7-60e8d0a4a547.png">
