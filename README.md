@@ -1,5 +1,5 @@
 # Scola
-Scola（スコラ）とは、勉強専門の質問サイトです。解法の手がかりがわからない、勉強法に不安がある、そういった悩みを質問すると他の方から回答を得ることができます。
+Scola（スコラ）とは、勉強専門の質問サイトです。解法の手がかりがわからない、勉強法に不安がある、そういった悩みを質問すると他の方から回答を得ることができます。<br>
 <img width="719" alt="scolascreenshot" src="https://user-images.githubusercontent.com/82514969/128848834-cecd1e0c-7f6c-4e46-a542-ba8cb3136ce7.png">
 
 ## URL
@@ -65,4 +65,4 @@ Scola（スコラ）とは、勉強専門の質問サイトです。解法の手
 <img width="1064" alt="ER図" src="https://user-images.githubusercontent.com/82514969/128861051-1fef2a0f-7d5e-45be-a355-52128e66f997.png">
 
 ## システム構築図
-<img width="1064" alt="システム構築図" src="https://user-images.githubusercontent.com/82514969/128968160-6aac14cb-748c-4355-984f-3c14b8562701.jpg">
+<img width="1064" alt="システム構築図" src="https://user-images.githubusercontent.com/82514969/129190680-dc803639-eff1-4153-98a6-8bb59c769437.png">
