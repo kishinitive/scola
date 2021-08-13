@@ -52,7 +52,11 @@ class ArticleController extends Controller
     }else{
       $path = null;
     }
-    $article->image = Storage::disk('s3')->url($path);
+    if (is_null($path)){
+      $article->image = null;
+    }else{
+      $article->image = Storage::disk('s3')->url($path);
+    }
     $article->save();
 
     $request->tags->each(function ($tagName) use ($article) {
