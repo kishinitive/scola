@@ -6,7 +6,7 @@
     <div>
       <div class="font-weight-bold">
         <a href="{{ route('users.show', ['name' => $article->user->name]) }}" class="text-dark">
-          {{ $article->user->name }}
+          {{ $comment->user->name }}
         </a>
       </div>
       <div class="font-weight-lighter">{{ $comment->created_at->format('Y/m/d H:i') }}</div>
